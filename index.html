@@ -70,20 +70,34 @@
 						<!-- Projects -->
 <article id="projects">
 	<h2 class="major">Projects</h2>
-	<div style="max-width: 420px; margin: 0 auto; text-align: center;">
-		<div style="font-size: 1.15em; font-weight: 600; color: #fff; margin-bottom: 12px; letter-spacing: 0.5px;">Climate Change and Disasters</div>
-		<div style="position: relative; display: inline-block; width: 100%; max-width: 380px;">
-			<img src="images/climatechange.jpeg" alt="Climate Change" style="width: 100%; border-radius: 16px; box-shadow: 0 4px 18px rgba(0,0,0,0.18); object-fit: cover; aspect-ratio: 4/3; background: #393e46;" />
-			<a href="https://visdat-climate.streamlit.app/" target="_blank" style="position: absolute; left: 50%; bottom: 18px; transform: translateX(-50%); background: rgba(35,39,47,0.92); color: #fff; padding: 10px 32px; border-radius: 24px; font-weight: 600; font-size: 1.08em; text-decoration: none; opacity: 0; transition: opacity 0.3s; box-shadow: 0 2px 8px rgba(0,0,0,0.13); border: 2px solid #e0e7ef;">View Project</a>
+	<div style="display: flex; gap: 32px; justify-content: center; flex-wrap: nowrap; overflow-x: auto;">
+		<!-- Project 1 -->
+		<div style="max-width: 380px; text-align: center;">
+			<div style="font-size: 1.15em; font-weight: 600; color: #fff; margin-bottom: 12px; letter-spacing: 0.5px;">Climate Change and Disasters</div>
+			<div style="position: relative; display: inline-block; width: 100%; max-width: 380px;">
+				<img src="images/climatechange.jpeg" alt="Climate Change" style="width: 100%; border-radius: 16px; box-shadow: 0 4px 18px rgba(0,0,0,0.18); object-fit: cover; aspect-ratio: 4/3; background: #393e46;" />
+				<a href="https://visdat-climate.streamlit.app/" target="_blank" style="position: absolute; left: 50%; bottom: 18px; transform: translateX(-50%); background: rgba(35,39,47,0.92); color: #fff; padding: 10px 32px; border-radius: 24px; font-weight: 600; font-size: 1.08em; text-decoration: none; opacity: 0; transition: opacity 0.3s; box-shadow: 0 2px 8px rgba(0,0,0,0.13); border: 2px solid #e0e7ef;">View Project</a>
+			</div>
+		</div>
+
+		<!-- Project 2: Tableau Dashboard -->
+		<div style="max-width: 380px; text-align: center;">
+			<div style="font-size: 1.15em; font-weight: 600; color: #fff; margin-bottom: 12px; letter-spacing: 0.5px;">USA Sales Dashboard</div>
+			<div style="position: relative; display: inline-block; width: 100%; max-width: 380px;">
+				<img src="images/usa.jpg" alt="USA Sales Dashboard" style="width: 100%; border-radius: 16px; box-shadow: 0 4px 18px rgba(0,0,0,0.18); object-fit: cover; aspect-ratio: 4/3; background: #393e46;" />
+				<a href="https://public.tableau.com/app/profile/felicia.cyntia.febriani/viz/USASalesDashboard_17549085129300/DashboardUSA" target="_blank" style="position: absolute; left: 50%; bottom: 18px; transform: translateX(-50%); background: rgba(35,39,47,0.92); color: #fff; padding: 10px 32px; border-radius: 24px; font-weight: 600; font-size: 1.08em; text-decoration: none; opacity: 0; transition: opacity 0.3s; box-shadow: 0 2px 8px rgba(0,0,0,0.13); border: 2px solid #e0e7ef;">View Project</a>
+			</div>
 		</div>
 	</div>
 	<script>
-	// Hover effect for "View Project" button
+	// Hover effect for "View Project" button (untuk semua project)
 	document.addEventListener('DOMContentLoaded', function() {
-	  var imgBox = document.querySelector('#projects div[style*="position: relative"]');
-	  var btn = imgBox.querySelector('a');
-	  imgBox.addEventListener('mouseenter', function() { btn.style.opacity = 1; });
-	  imgBox.addEventListener('mouseleave', function() { btn.style.opacity = 0; });
+	  var imgBoxes = document.querySelectorAll('#projects div[style*="position: relative"]');
+	  imgBoxes.forEach(function(imgBox) {
+	    var btn = imgBox.querySelector('a');
+	    imgBox.addEventListener('mouseenter', function() { btn.style.opacity = 1; });
+	    imgBox.addEventListener('mouseleave', function() { btn.style.opacity = 0; });
+	  });
 	});
 	</script>
 </article>
